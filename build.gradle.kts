@@ -24,12 +24,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
     implementation("org.json:json:20220320")
     implementation("org.apache.commons:commons-lang3:3.12.0")
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.0.0")
+    implementation("io.jsonwebtoken:jjwt-api:0.10.7")
+    runtimeOnly("io.jsonwebtoken:jjwt-impl:0.10.7")
+    runtimeOnly("io.jsonwebtoken:jjwt-jackson:0.10.7")
 
     runtimeOnly("org.postgresql:postgresql")
-
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("com.h2database:h2:2.1.214")
 }
 
 tasks.withType<Test>().configureEach {

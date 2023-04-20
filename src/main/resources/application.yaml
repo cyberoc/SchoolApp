@@ -8,9 +8,6 @@ spring:
     spring.jpa.database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
+    show-sql: false
+
   #sql.init.mode: always
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://dev-95455080.okta.com/oauth2/default

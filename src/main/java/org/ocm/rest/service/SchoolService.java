@@ -11,13 +11,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Slf4j
 @Service
 public class SchoolService {
 
     private final StudentRepository studentRepository;
+
     private final ClassesRepository classesRepository;
 
     private final TeacherRepository teacherRepository;

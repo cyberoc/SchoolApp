@@ -1,13 +1,12 @@
 package org.ocm.dto;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.List;
 
 @Data
 @Entity
@@ -16,6 +15,7 @@ import java.util.List;
 public class ClassesDTO {
 
     @Id
+    @JsonIgnore
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -35,6 +35,6 @@ public class ClassesDTO {
 
     @JsonManagedReference
     @OneToOne(mappedBy = "classes")
-    private TeacherDTO classes;
+    private TeacherDTO teacher;
 
 }

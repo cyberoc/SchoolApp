@@ -23,7 +23,7 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/school")
 public class SchoolController {
 
     private final SchoolService schoolService;
@@ -35,7 +35,7 @@ public class SchoolController {
 
     @GetMapping("/getAllStudents")
     public ResponseEntity<List<StudentDTO>> getAllStudents(@RequestParam(defaultValue = "0") int page,
-                                                           @RequestParam(defaultValue = "1") int size) {
+                                                           @RequestParam(defaultValue = "10") int size) {
         List<StudentDTO> allStudents = new ArrayList<StudentDTO>();
         Pageable paging = PageRequest.of(page, size);
 
